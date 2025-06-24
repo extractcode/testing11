@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+nav button {
+  margin: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.section {
+  padding: 20px;
+}
+input, button, select {
+  margin: 5px;
+  padding: 8px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+}

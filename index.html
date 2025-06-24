@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SPYDER's Web Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>SPYDER's Combined Projects</h1>
+    <nav>
+      <button onclick="showSection('portfolio')">Portfolio</button>
+      <button onclick="showSection('todo')">To-Do List</button>
+      <button onclick="showSection('products')">Product List</button>
+    </nav>
+  </header>
+
+  <section id="portfolio" class="section">
+    <h2>Portfolio</h2>
+    <p>Hello, I'm SPYDER — Web Developer & Tech Enthusiast.</p>
+    <p>This is a simple portfolio landing section.</p>
+  </section>
+
+  <section id="todo" class="section" style="display:none;">
+    <h2>To-Do List</h2>
+    <input id="taskInput" type="text" placeholder="Add a task...">
+    <button onclick="addTask()">Add</button>
+    <ul id="taskList"></ul>
+  </section>
+
+  <section id="products" class="section" style="display:none;">
+    <h2>Product List</h2>
+    <div class="controls">
+      <select id="categoryFilter" onchange="filterProducts()">
+        <option value="all">All Categories</option>
+        <option value="electronics">Electronics</option>
+        <option value="clothing">Clothing</option>
+      </select>
+      <select id="sortOption" onchange="sortProducts()">
+        <option value="priceAsc">Price: Low to High</option>
+        <option value="priceDesc">Price: High to Low</option>
+      </select>
+    </div>
+    <div id="productContainer" class="products"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
